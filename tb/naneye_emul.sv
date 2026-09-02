@@ -75,8 +75,12 @@ module naneye_emul #(
     logic [ROW_COUNT_WIDTH-1:0] row_count;
     logic [COL_COUNT_WIDTH-1:0] col_count;
 
+    // Retain complete sensor configuration registers even though the simplified
+    // emulator currently models only the REG1 row-delay field
+    /* verilator lint_off UNUSEDSIGNAL */
     logic [15:0] reg0;
     logic [15:0] reg1;
+    /* verilator lint_on UNUSEDSIGNAL */
 
     logic [22:0] config_shift;
     logic [23:0] config_word;
