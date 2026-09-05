@@ -13,8 +13,6 @@ NanEyeC is a miniature camera module manufactured by ams OSRAM. This repository 
 - Synchronization support for multiple sensors (usage shown in examples)
 - Validation using a behavioral sensor model with single- and multiple-sensor testbenches
 
-## Example Images
-
 ## Controller Diagram
 
 <p align="center">
@@ -65,7 +63,22 @@ The single-sensor testbench includes:
 
 There is also a multiple sensor testbench that configures two controllers with different delay values and verifies that their `valid`, `frame_pulse`, and pixel outputs remain synchronized.
 
-The controller was also synthesized and tested on an FPGA board. The example picture captures are given above.
+The controller was also synthesized and tested on an FPGA board. The example picture captures are given below.
+
+## Example Images
+
+<p align="center">
+  <img src="docs/naneye-calibration-board.png" alt="Calibration board frame" width="45%">
+  <br>
+  <em>Calibration board capture</em>
+</p>
+
+<p align="center">
+  <img src="docs/naneye-timer-u1.png" alt="Timer frame captured by U1" width="45%">
+  <img src="docs/naneye-timer-u2.png" alt="Timer frame captured by U2" width="45%">
+  <br>
+  <em>Running timer captured by two sensors, demonstrating synchronization</em>
+</p>
 
 ### Run the tests
 
